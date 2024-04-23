@@ -1,0 +1,12 @@
+<h1>Welcome to Mini Message Board</h1>
+<ul>
+  <% messages.reverse().forEach(message => { %>
+  <li>
+    <span class="message poppins-bold"><%= message.text %></span> by
+    <span class="author poppins-regular-italic"><%= message.user %></span>
+    at
+    <span class="time">(<%= message.time %>)</span>
+  </li>
+  <% }) %>
+</ul>
+<a href="/new" class="btn">Add New</a>
